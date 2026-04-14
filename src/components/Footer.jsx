@@ -1,0 +1,11 @@
+const Footer = () => {
+  return (
+    <footer className="py-6 text-center border-t border-border">
+      <p className="text-textSecondary">
+        Designed & built with intent — not templates.
+      </p>
+    </footer>
+  );
+};
+
+export default Footer;
