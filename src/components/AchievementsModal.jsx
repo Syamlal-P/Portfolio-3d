@@ -4,40 +4,40 @@ import { useRef, useEffect } from "react";
 const achievements = [
   {
     title: "1st in Debugging",
-    image: "/src/assets/cert1.jpg",
+    image: "/assets/cert1.jpg",
     desc: "Secured 1st place in the Debugging competition at GENESIS 2025",
     link: "https://www.linkedin.com/posts/syam-lal-p_genesis2025-debugging-coding-activity-7311574719869149184-gPzM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   },
   {
     title: "2nd place in Debugging",
-    image: "/src/assets/cert2.jpg",
+    image: "/assets/cert2.jpg",
     desc: "🥈 2nd place in Debugging at TE-X-US",
     link: "https://www.linkedin.com/posts/syam-lal-p_techfest-debugging-intercollege-activity-7410168684436103168-QVns?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   },
   {
     title: "🏆 Second Prize in WEBLOOM & ERROR 404",
-    image: "/src/assets/certi3.jpg",
+    image: "/assets/certi3.jpg",
     desc: "🏆 Second Prize in WEBLOOM ERROR 404 at QBIT-26",
     link: "https://www.linkedin.com/posts/syam-lal-p_qbit26-webdesign-debugging-activity-7427617669731852288-npYL?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   }
 ,
   {
     title: "🥈 Second Place in the Web Designing",
-    image: "/src/assets/cert4.jpg",
+    image: "/assets/cert4.jpg",
     desc: " secured 🥈 Second Place in the Web Designing at GENESIS 2026",
     link: "https://www.linkedin.com/posts/syam-lal-p_webdesign-techevents-studentachievements-activity-7438095936125554688-SPPw?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   }
 ,
   {
     title: "🥈 2nd place in Web Designing",
-    image: "/src/assets/cert5.jpg",
+    image: "/assets/cert5.jpg",
     desc: "Secured 2nd place in Web Designing at Spyder",
     link: "https://www.linkedin.com/posts/syam-lal-p_webdesign-techfest-achievement-ugcPost-7452978994766876672-ITYI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   }
 ,
   {
     title: "Hackathon Experience",
-    image: "/src/assets/cert6.jpg",
+    image: "/assets/cert6.jpg",
     desc: "Built real solutions with my team under pressure",
     link: "https://www.linkedin.com/posts/syam-lal-p_hackathon-coderevolt2025-dhruvtechfest-activity-7389500997590581248-7-bc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   }

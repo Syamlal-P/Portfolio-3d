@@ -6,7 +6,7 @@ const projects = [
 
 desc: "An AI-powered system that detects potential allergens from food ingredient labels using trained model.",
 
-image: "/src/assets/project2.png",
+image: "/assets/project2.png",
 
 tech: ["TensorFlow", "CNN", "Flask", "Computer Vision", "Python"],
 
@@ -27,7 +27,7 @@ features: [
 
 desc: "An AI-powered plant disease detection system that uses deep learning to identify diseases in paddy leaves and provide actionable remedies for farmers.",
 
-image: "/src/assets/project3.png",
+image: "/assets/project3.png",
 
 tech: ["CNN", "ResNet", "Flask", "Python", "TensorFlow"],
 
@@ -48,7 +48,7 @@ features: [
 
 desc: "A web-based fitness accountability app that restricts access to Instagram Web until the user completes a physical activity verified through computer vision.",
 
-image: "/src/assets/project4.png",
+image: "/assets/project4.png",
 
 tech: ["React", "Computer Vision", "JavaScript", "Web APIs"],
 
@@ -69,7 +69,7 @@ features: [
 
 desc: "An interactive web-based illusion that predicts a user’s chosen emoji using a mathematical pattern hidden within a dynamic matrix.",
 
-image: "/src/assets/project5.png",
+image: "/assets/project5.png",
 
 tech: ["HTML", "CSS", "JavaScript"],
 
@@ -93,7 +93,7 @@ features: [
 
 desc: "A machine learning-based system that identifies phishing websites by analyzing URL and webpage features.",
 
-image: "/src/assets/project1.png",
+image: "/assets/project1.png",
 
 tech: ["Python", "Machine Learning", "Flask", "Scikit-learn"],
 

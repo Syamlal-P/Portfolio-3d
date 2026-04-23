@@ -45,7 +45,7 @@ style={{ backfaceVisibility: "hidden" }}
         style={{ backfaceVisibility: "hidden" }}
       >
         <img
-          src="/src/assets/about2.jpg"
+          src="/assets/about2.jpg"
           className="w-full h-full object-cover rounded-xl shadow-md"
           alt="front"
         />
@@ -60,7 +60,7 @@ style={{
 }}
       >
         <img
-  src="/src/assets/about.jpg"
+  src="/assets/about.jpg"
   className="w-full h-full object-cover object-[center_20%] rounded-xl shadow-md"
   alt="back"
 />

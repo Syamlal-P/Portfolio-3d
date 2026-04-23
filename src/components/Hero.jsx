@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const Hero = () => {
   const images = [
-  "/src/assets/hero.png",
-  "/src/assets/hero2.png", // add second image
+  "/assets/hero.png",
+  "/assets/hero2.png", // add second image
 ];
 
 
