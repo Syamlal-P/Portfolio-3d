@@ -32,7 +32,7 @@ const achievements = [
     title: "🥈 2nd place in Web Designing",
     image: "/src/assets/cert5.jpg",
     desc: "Secured 2nd place in Web Designing at Spyder",
-    link: "https://linkedin.com"
+    link: "https://www.linkedin.com/posts/syam-lal-p_webdesign-techfest-achievement-ugcPost-7452978994766876672-ITYI?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE8HczYB_WIEJBvVH-DlUu87Cnrlf1VZMww"
   }
 ,
   {
