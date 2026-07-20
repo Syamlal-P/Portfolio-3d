@@ -109,11 +109,54 @@ const projects = [
     ],
   },
   {
+    "title": "CloakID – Adversarial Image Immunization System",
+
+    "desc": "A privacy-first adversarial defense system that embeds imperceptible noise into personal images – silently disrupting how AI models perceive and manipulate them, so your identity stays yours.",
+
+    "image": "/assets/project6.png",
+
+    "tech": [
+      "Python",
+      "PyTorch",
+      "Diffusers",
+      "Transformers",
+      "Streamlit",
+      "Gradio",
+      "Hugging Face",
+      "Deep Learning",
+      "Adversarial ML",
+      "VAE",
+      "CLIP"
+    ],
+
+    "details": "CloakID is a dual-layer adversarial image immunization system that protects personal photos from unauthorized AI manipulation. The project consists of two core modules: Module 1 generates an imperceptible adversarial perturbation (using PGD + EOT optimization) that is added to the original image, making it resistant to diffusion-based editing attacks while remaining visually identical to the naked eye. Module 2 verifies the shield's effectiveness by running actual InstructPix2Pix attacks on both the original and protected images, then computing comprehensive metrics including SSIM, LPIPS, CLIP similarity, sharpness, and a composite Protection Score. The system features a premium editorial luxury UI with a matte black background, champagne beige accents, oversized typography, film grain texture, and a white gallery frame – designed to feel like a high-end digital agency. Built for researchers, privacy advocates, and AI safety professionals, CloakID demonstrates state-of-the-art adversarial defense against generative AI threats.",
+
+    "features": [
+      "Dual-layer adversarial immunization using VAE + CLIP loss functions",
+      "PGD (Projected Gradient Descent) optimization with EOT (Expectation over Transformations)",
+      "Imperceptible perturbation – SSIM > 0.95, visually identical to original",
+      "Robust against InstructPix2Pix diffusion-based editing attacks",
+      "Comprehensive verification module with 6 key metrics: SSIM, LPIPS, Sharpness, PSNR, CLIP similarity, Composite Protection Score",
+      "Two deployment options: protection and verification",
+      "Premium editorial luxury UI – matte black, champagne beige, oversized Bebas Neue typography",
+      "White gallery frame with film grain texture for premium feel",
+      "Glassmorphism hero object with 3D chrome aesthetic",
+      "Asymmetrical editorial magazine layout with Swiss-inspired grid system",
+      "Real-time protection with progress tracking",
+      "Download protected images and export verification reports",
+      "Ngrok integration for instant public deployment",
+      "Optimized for Kaggle notebooks with GPU acceleration",
+      "Hugging Face model caching for fast reloading",
+      "Production-ready with clean, maintainable codebase"
+    ]
+  },
+
+  {
     title: "Mehendi by Suha",
 
     desc: "A premium luxury portfolio website for a professional mehendi artist, showcasing bridal, festive, Arabic, and custom henna designs through an elegant, mobile-first user experience.",
 
-    image: "/assets/project6.png",
+    image: "/assets/project7.png",
 
     tech: [
       "HTML",
