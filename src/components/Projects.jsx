@@ -189,11 +189,11 @@ const Projects = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   return (
-    <section id="projects" className="bg-[#ECECEC] py-24 px-6">
+    <section id="projects" className="bg-[#ECECEC] py-16 md:py-24 px-4 sm:px-6">
 
       {/* HEADING */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl font-semibold text-black font-display">
+      <div className="text-center mb-10 md:mb-16">
+        <h2 className="text-3xl sm:text-4xl font-semibold text-black font-display">
           Projects
         </h2>
         <div className="flex justify-center mt-2">
@@ -202,29 +202,29 @@ const Projects = () => {
       </div>
 
       {/* GRID */}
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
         {projects.map((proj, index) => (
           <div
             key={index}
             onClick={() => setSelectedIndex(index)}
             className="
-    cursor-pointer
-    bg-white rounded-xl shadow-lg overflow-hidden
-    transition duration-300
-    hover:-translate-y-2 hover:shadow-xl
-  "
+              cursor-pointer
+              bg-white rounded-xl shadow-lg overflow-hidden
+              transition duration-300
+              hover:-translate-y-2 hover:shadow-xl
+            "
           >
 
             {/* IMAGE */}
             <img
               src={proj.image}
-              className="w-full h-40 object-cover"
+              className="w-full h-44 sm:h-40 object-cover"
               alt={proj.title}
             />
 
             {/* CONTENT */}
-            <div className="p-5">
+            <div className="p-4 sm:p-5">
 
               <h3 className="text-lg font-semibold text-black">
                 {proj.title}
@@ -240,16 +240,16 @@ const Projects = () => {
                   <span
                     key={i}
                     className="
-    text-xs px-3 py-1 rounded-full
-    bg-black text-white
-  "
+                      text-xs px-3 py-1 rounded-full
+                      bg-black text-white
+                    "
                   >
                     {t}
                   </span>
                 ))}
               </div>
 
-              <div className="mt-4 flex gap-3">
+              <div className="mt-4 flex flex-wrap gap-3">
 
                 {/* GITHUB (only if exists) */}
                 {proj.github && (
@@ -259,11 +259,11 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-        text-sm px-4 py-2 rounded-full
-        border border-black text-black
-        transition duration-300
-        hover:bg-black hover:text-white
-      "
+                      text-sm px-4 py-2 rounded-full
+                      border border-black text-black
+                      transition duration-300
+                      hover:bg-black hover:text-white
+                    "
                   >
                     GitHub
                   </a>
@@ -277,11 +277,11 @@ const Projects = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
-        text-sm px-4 py-2 rounded-full
-        border border-black text-black
-        transition duration-300
-        hover:bg-black hover:text-white
-      "
+                      text-sm px-4 py-2 rounded-full
+                      border border-black text-black
+                      transition duration-300
+                      hover:bg-black hover:text-white
+                    "
                   >
                     Live Demo
                   </a>
@@ -295,23 +295,24 @@ const Projects = () => {
 
       </div>
       {selectedIndex !== null && (
-        <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50">
+        <div className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50 p-2 sm:p-4">
 
           {/* LEFT ARROW */}
           {selectedIndex > 0 && (
             <button
               onClick={() => setSelectedIndex(selectedIndex - 1)}
               className="
-    absolute left-6
-    w-12 h-12 flex items-center justify-center
-    rounded-full
-    bg-white/10 backdrop-blur-md
-    border border-white/20
-    text-white text-xl
-    transition duration-300
-    hover:scale-110 hover:bg-white hover:text-black
-    shadow-lg
-  "
+                absolute left-2 sm:left-6
+                w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center
+                rounded-full
+                bg-black/60 backdrop-blur-md
+                border border-white/20
+                text-white text-base sm:text-xl
+                transition duration-300
+                hover:scale-110 hover:bg-white hover:text-black
+                shadow-lg z-50
+              "
+              aria-label="Previous project"
             >
               ‹
             </button>
@@ -322,16 +323,17 @@ const Projects = () => {
             <button
               onClick={() => setSelectedIndex(selectedIndex + 1)}
               className="
-    absolute right-6
-    w-12 h-12 flex items-center justify-center
-    rounded-full
-    bg-white/10 backdrop-blur-md
-    border border-white/20
-    text-white text-xl
-    transition duration-300
-    hover:scale-110 hover:bg-white hover:text-black
-    shadow-lg
-  "
+                absolute right-2 sm:right-6
+                w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center
+                rounded-full
+                bg-black/60 backdrop-blur-md
+                border border-white/20
+                text-white text-base sm:text-xl
+                transition duration-300
+                hover:scale-110 hover:bg-white hover:text-black
+                shadow-lg z-50
+              "
+              aria-label="Next project"
             >
               ›
             </button>
@@ -342,15 +344,16 @@ const Projects = () => {
           <button
             onClick={() => setSelectedIndex(null)}
             className="
-      fixed top-6 right-6 z-[999]
-      w-10 h-10 flex items-center justify-center
-      rounded-full
-      bg-black/40 backdrop-blur-md
-      border border-white/20
-      text-white text-xl
-      hover:scale-110 hover:bg-white hover:text-black
-      transition duration-300
-    "
+              fixed top-4 right-4 sm:top-6 sm:right-6 z-[999]
+              w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center
+              rounded-full
+              bg-black/60 backdrop-blur-md
+              border border-white/20
+              text-white text-lg sm:text-xl
+              hover:scale-110 hover:bg-white hover:text-black
+              transition duration-300
+            "
+            aria-label="Close modal"
           >
             ✕
           </button>
@@ -358,25 +361,23 @@ const Projects = () => {
 
           {/* MODAL CARD */}
           <div className="
-      bg-[#1A1B1F] text-white
-      w-[90%] max-w-2xl
-      p-6 rounded-xl relative
-      shadow-2xl
-max-h-[80vh] overflow-y-auto
-scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
-    ">
-
-            {/* CLOSE */}
-
+            bg-[#1A1B1F] text-white
+            w-[92%] sm:w-[90%] max-w-2xl
+            p-4 sm:p-6 rounded-xl relative
+            shadow-2xl
+            max-h-[85vh] overflow-y-auto
+            scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
+          ">
 
             {/* IMAGE */}
             <img
               src={projects[selectedIndex].image}
-              className="w-full h-48 object-cover object-[center_30%] rounded-lg mb-4"
+              alt={projects[selectedIndex].title}
+              className="w-full h-40 sm:h-48 object-cover object-[center_30%] rounded-lg mb-4"
             />
 
             {/* TITLE */}
-            <h2 className="text-xl font-semibold mb-3">
+            <h2 className="text-lg sm:text-xl font-semibold mb-3">
               {projects[selectedIndex].title}
             </h2>
 
@@ -385,7 +386,7 @@ scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
               Overview
             </h4>
 
-            <p className="text-gray-400 text-sm mb-4">
+            <p className="text-gray-400 text-xs sm:text-sm mb-4">
               {projects[selectedIndex].desc}
             </p>
             {/* DETAILS */}
@@ -395,7 +396,7 @@ scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
                   Details
                 </h4>
 
-                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-300 text-xs sm:text-sm mb-4 leading-relaxed">
                   {projects[selectedIndex].details}
                 </p>
               </>
@@ -408,13 +409,15 @@ scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
                   Features
                 </h4>
 
-                <ul className="text-gray-400 text-sm mb-4 space-y-1">
+                <ul className="text-gray-400 text-xs sm:text-sm mb-4 space-y-1">
                   {projects[selectedIndex].features.map((f, i) => (
                     <li key={i}>• {f}</li>
                   ))}
                 </ul>
               </>
-            )}      {/* TECH */}
+            )}
+
+            {/* TECH */}
             <div className="flex flex-wrap gap-2 mb-4">
               {projects[selectedIndex].tech.map((t, i) => (
                 <span key={i} className="bg-black text-white text-xs px-3 py-1 rounded-full">
@@ -424,18 +427,19 @@ scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
             </div>
 
             {/* BUTTONS */}
-            <div className="flex gap-3">
+            <div className="flex flex-wrap gap-3">
 
               {projects[selectedIndex].github && (
                 <a
                   href={projects[selectedIndex].github}
                   target="_blank"
+                  rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                   className="
-              text-sm px-4 py-2 rounded-full
-              border border-white text-white
-              hover:bg-white hover:text-black transition
-            "
+                    text-xs sm:text-sm px-4 py-2 rounded-full
+                    border border-white text-white
+                    hover:bg-white hover:text-black transition
+                  "
                 >
                   GitHub
                 </a>
@@ -445,12 +449,13 @@ scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent
                 <a
                   href={projects[selectedIndex].demo}
                   target="_blank"
+                  rel="noopener noreferrer"
                   onClick={(e) => e.stopPropagation()}
                   className="
-              text-sm px-4 py-2 rounded-full
-              border border-white text-white
-              hover:bg-white hover:text-black transition
-            "
+                    text-xs sm:text-sm px-4 py-2 rounded-full
+                    border border-white text-white
+                    hover:bg-white hover:text-black transition
+                  "
                 >
                   Live Demo
                 </a>

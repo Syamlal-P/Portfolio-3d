@@ -72,120 +72,130 @@ const scrollRef = useRef(null);
 };
 
   return (
-  <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-[999] flex items-center justify-center overflow-hidden">
+    <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-[999] flex items-center justify-center overflow-hidden p-2 sm:p-0">
 
-    {/* CLOSE */}
-    <button
-      onClick={onClose}
-      className="absolute top-6 right-6 text-white text-2xl z-50"
-    >
-      ✕
-    </button>
+      {/* CLOSE */}
+      <button
+        onClick={onClose}
+        className="
+          absolute top-4 right-4 sm:top-6 sm:right-6 z-[100]
+          w-9 h-9 sm:w-10 sm:h-10 flex items-center justify-center
+          rounded-full bg-black/60 border border-white/20
+          text-white text-lg sm:text-2xl hover:scale-110 hover:bg-white hover:text-black transition
+        "
+        aria-label="Close modal"
+      >
+        ✕
+      </button>
 
-    {/* LEFT ARROW */}
-    <button
-      onClick={() => scroll("left")}
-      className="
-        absolute left-6 z-50
-        w-12 h-12 flex items-center justify-center
-        rounded-full
-        bg-black/40 backdrop-blur-md
-        border border-white/20
-        text-white text-xl
-        hover:scale-110 hover:bg-white hover:text-black
-        transition duration-300
-      "
-    >
-      ‹
-    </button>
+      {/* LEFT ARROW */}
+      <button
+        onClick={() => scroll("left")}
+        className="
+          absolute left-2 sm:left-6 z-50
+          w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center
+          rounded-full
+          bg-black/60 backdrop-blur-md
+          border border-white/20
+          text-white text-base sm:text-xl
+          hover:scale-110 hover:bg-white hover:text-black
+          transition duration-300
+        "
+        aria-label="Scroll left"
+      >
+        ‹
+      </button>
 
-    {/* RIGHT ARROW */}
-    <button
-      onClick={() => scroll("right")}
-      className="
-        absolute right-6 z-50
-        w-12 h-12 flex items-center justify-center
-        rounded-full
-        bg-black/40 backdrop-blur-md
-        border border-white/20
-        text-white text-xl
-        hover:scale-110 hover:bg-white hover:text-black
-        transition duration-300
-      "
-    >
-      ›
-    </button>
+      {/* RIGHT ARROW */}
+      <button
+        onClick={() => scroll("right")}
+        className="
+          absolute right-2 sm:right-6 z-50
+          w-9 h-9 sm:w-12 sm:h-12 flex items-center justify-center
+          rounded-full
+          bg-black/60 backdrop-blur-md
+          border border-white/20
+          text-white text-base sm:text-xl
+          hover:scale-110 hover:bg-white hover:text-black
+          transition duration-300
+        "
+        aria-label="Scroll right"
+      >
+        ›
+      </button>
 
-    {/* WRAPPER */}
-    <div className="relative w-full">
+      {/* WRAPPER */}
+      <div className="relative w-full">
 
-  {/* LEFT FADE */}
-  <div className="
-    pointer-events-none
-    absolute left-0 top-0 h-full w-16 z-20
-    bg-gradient-to-r from-black/80 to-transparent
-  " />
+        {/* LEFT FADE */}
+        <div className="
+          pointer-events-none
+          absolute left-0 top-0 h-full w-6 sm:w-16 z-20
+          bg-gradient-to-r from-black/80 to-transparent
+        " />
 
-  {/* RIGHT FADE */}
-  <div className="
-    pointer-events-none
-    absolute right-0 top-0 h-full w-16 z-20
-    bg-gradient-to-l from-black/80 to-transparent
-  " />
+        {/* RIGHT FADE */}
+        <div className="
+          pointer-events-none
+          absolute right-0 top-0 h-full w-6 sm:w-16 z-20
+          bg-gradient-to-l from-black/80 to-transparent
+        " />
 
-  {/* SCROLL CONTAINER */}
-  <div
-    ref={scrollRef}
-    className="overflow-x-auto overflow-y-hidden flex gap-8 px-10 scroll-smooth"
-  >
+        {/* SCROLL CONTAINER */}
+        <div
+          ref={scrollRef}
+          className="overflow-x-auto overflow-y-hidden flex gap-4 sm:gap-8 px-4 sm:px-10 scroll-smooth no-scrollbar"
+        >
 
-        {[...achievements, ...achievements].map((item, index) => (
-          <motion.div
-            key={index}
-            className="
-              min-w-[280px]
-              bg-[#1A1B1F]
-              rounded-xl
-              overflow-hidden
-              shadow-lg
-              flex-shrink-0
-              transition duration-500
-              opacity-50 scale-90
-              hover:opacity-100 hover:scale-105
-            "
-          >
-            <img
-              src={item.image}
-              className="h-40 w-full object-cover"
-            />
+          {[...achievements, ...achievements].map((item, index) => (
+            <motion.div
+              key={index}
+              className="
+                min-w-[240px] sm:min-w-[280px]
+                max-w-[80vw] sm:max-w-none
+                bg-[#1A1B1F]
+                rounded-xl
+                overflow-hidden
+                shadow-lg
+                flex-shrink-0
+                transition duration-500
+                opacity-80 sm:opacity-50 scale-95 sm:scale-90
+                hover:opacity-100 hover:scale-105
+              "
+            >
+              <img
+                src={item.image}
+                alt={item.title}
+                className="h-36 sm:h-40 w-full object-cover"
+              />
 
-            <div className="p-4">
-              <h3 className="text-white font-semibold text-sm">
-                {item.title}
-              </h3>
+              <div className="p-4">
+                <h3 className="text-white font-semibold text-sm">
+                  {item.title}
+                </h3>
 
-              <p className="text-gray-400 text-xs mt-2">
-                {item.desc}
-              </p>
+                <p className="text-gray-400 text-xs mt-2">
+                  {item.desc}
+                </p>
 
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs mt-3 inline-block text-white border border-white px-3 py-1 rounded-full hover:bg-white hover:text-black transition"
-              >
-                View
-              </a>
-            </div>
-          </motion.div>
-        ))}
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs mt-3 inline-block text-white border border-white px-3 py-1 rounded-full hover:bg-white hover:text-black transition"
+                >
+                  View
+                </a>
+              </div>
+            </motion.div>
+          ))}
 
-      </div> {/* CLOSE SCROLL */}
+        </div> {/* CLOSE SCROLL */}
 
-    </div> {/* CLOSE WRAPPER */}
+      </div> {/* CLOSE WRAPPER */}
 
-  </div>
-);
+    </div>
+  );
 };
 
 export default AchievementsModal;
