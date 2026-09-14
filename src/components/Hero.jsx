@@ -21,7 +21,7 @@ const Hero = () => {
 
       {/* BACKGROUND TEXT */}
       <motion.div
-        className="absolute top-16 w-full flex justify-between px-4 sm:px-10 md:px-20 pointer-events-none"
+        className="absolute top-20 sm:top-24 md:top-28 w-full flex justify-between px-4 sm:px-10 md:px-20 pointer-events-none"
       >
         {/* LEFT TEXT */}
         <h1 className="
